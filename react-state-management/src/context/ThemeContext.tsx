@@ -13,7 +13,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(LIGHT_THEME);
 
-    useEffect(() => {
+  useEffect(() => {
     document.body.dataset.theme = theme;
   }, [theme]);
 
