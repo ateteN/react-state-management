@@ -12,10 +12,9 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(LIGHT_THEME);
-
-  useEffect(() => {
-    document.body.dataset.theme = theme;
-  }, [theme]);
+    useEffect(() => {
+      document.body.dataset.theme = theme;
+    }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prevTheme) =>
